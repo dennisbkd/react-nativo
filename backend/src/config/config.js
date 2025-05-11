@@ -1,0 +1,5 @@
+export const {
+  PORT = 3000,
+  SALT_ROUNDS = 10,
+  SECRET_WORD = 'ESTA_ES_UNA_PRUEBA_PARA_LA_UNIVERSIDAD'
+} = process.env

@@ -1,0 +1,62 @@
+#####
+GET http://localhost:3000/auth/register
+
+####
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "nombreUsuario": "carlos123512",
+    "nombre": "dennisda",
+    "password": "dennis1234452",
+    "confirm":"dennis1234452",
+    "correo": "carlos11@gmail.com",
+    "telefono": "71267275",
+    "direccion":"av. ayacucho"
+}
+####
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "nombreUsuario": "dennisbk",
+    "password": "dennis123"
+}
+
+###
+GET http://localhost:3000/auth/profile
+
+
+###
+GET http://localhost:3000/auth/logout
+
+
+###$ 
+GET http://localhost:3000/inventario/1
+
+
+##### router PEDIDOS
+POST http://localhost:3000/pedidos
+Content-Type: application/json
+
+{
+    "ClienteID": 1,
+    "MeseroID":1, 
+    "CocineroID":3,
+    "Fecha":"2023-05-01",
+    "Hora":"18:12:00",
+    "Estado":"Pendiente",
+    "Productos": [
+    { "ProductoID": 6, "Cantidad": 2, "Precio": 10.99 },
+    { "ProductoID": 7, "Cantidad": 1, "Precio": 15.50 },
+    { "ProductoID": 8, "Cantidad": 4, "Precio": 8.75 }
+    ]
+}
+
+### 
+PATCH  http://localhost:3000/pedidos/10
+Content-Type: application/json
+
+{
+    "Estado":"Cancelado"
+}
